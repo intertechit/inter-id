@@ -282,7 +282,7 @@ ul {
 .rozet-box .gem {
   position: absolute;
 }
-.rozet-box .legerandy {
+.rozet-box .legendary {
   top: 11px;
   left: 147px;
 }
@@ -325,14 +325,14 @@ ul {
 }
 .rozet-box .text {
   position: absolute;
+  cursor: pointer;
   top: 160px;
   left: 20px;
   width: 143px;
   height: 35px;
   text-align: center;
 }
-.rozet-box .text a {
-  text-decoration: none;
+.rozet-box .text p {
   font-size: 14px;
   font-weight: bold;
   width: 143px;
@@ -488,11 +488,11 @@ ul {
 .han-rozet-box .gem {
   position: absolute;
 }
-.han-rozet-box .legerandy {
+.han-rozet-box .legendary {
   top: 2px;
   left: 72px;
 }
-.han-rozet-box .legerandy img {
+.han-rozet-box .legendary img {
   width: 13px;
   height: auto;
 }

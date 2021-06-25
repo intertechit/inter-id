@@ -15,7 +15,6 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path="/rozet-ekle" component={RozetEkle} />
-        <Route exact path="/deneme" component={Deneme} />
         <Route exact path="/rozet-duzenleme" component={RozetDuzenle} />
         <Route exact path="/legendary-rozetler" component={LegendaryRozetler} />
         <Route exact path="/unique-rozetler" component={UniqueRozetler} />
