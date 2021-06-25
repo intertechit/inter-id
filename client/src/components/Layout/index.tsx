@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 import useTheme from "../../hooks/useTheme";
 
@@ -9,17 +9,12 @@ interface LayoutProps {
 
 export default function index({ children }: LayoutProps) {
   const theme = useTheme();
-  const history = useHistory();
 
   return (
     <div className="gamification-main-container">
       <div className="game-row">
         <div className="logo">
-          <img
-            src="/images/logo.png"
-            alt=""
-            onClick={() => history.push("kullanici-duzenleme.html")}
-          />
+          <img src="/images/logo.png" alt="" />
         </div>
         <div className="dark-theme" onClick={() => theme.setDark(true)}>
           <img src="/images/dark-gem.png" width="30" height="31" alt="" />
@@ -57,12 +52,14 @@ export default function index({ children }: LayoutProps) {
       </div>
       <div className="header-container">
         <div className="user-image">
-          <img
-            src="publishing-images/user/user-tempjpg"
-            width="1060"
-            height="1119"
-            alt=""
-          />
+          <Link to="/kullanici-duzenle">
+            <img
+              src="publishing-images/user/user-tempjpg"
+              width="1060"
+              height="1119"
+              alt=""
+            />
+          </Link>
         </div>
 
         <div className="user-organisation">
@@ -98,34 +95,30 @@ export default function index({ children }: LayoutProps) {
       <div className="main-content">
         <div className="menu">
           <ul>
-            <li className="active">
-              <a href="rozetlerim.html">
+            <li>
+              <Link to="/">
                 <span>ROZETLERİ</span>
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a href="han.html">
+              <Link to="/han">
                 <span>HAN</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="siralamlar.html">
+              <Link to="/siralamalar">
                 <span>SIRALAMALAR</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="tum-rozetler.html">
+              <Link to="/tum-rozetler">
                 <span>TÜM ROZETLER</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
-
-        <div className="main-container-top">
-          <b></b>
-        </div>
-        <div className="main-container-middle">{children}</div>
-        <div className="main-container-bottom"></div>
+        {children}
       </div>
 
       <div className="game-footer">@ Intertech 2021</div>

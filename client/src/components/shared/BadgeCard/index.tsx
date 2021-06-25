@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import Gem from "./Gem";
 import ModalGem from "./ModalGem";
@@ -72,7 +73,7 @@ export default function BadgeCard() {
         </Modal.Body>
         <Modal.Footer>
           <div className="model-cta-button">
-            <a href="rozete-yorum.html">Derya'nın rozetine yorum yap</a>
+            <Link to="/rozete-yorum">Derya'nın rozetine yorum yap</Link>
           </div>
         </Modal.Footer>
       </Modal>
