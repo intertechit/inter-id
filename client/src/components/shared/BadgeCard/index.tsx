@@ -5,6 +5,8 @@ import Gem from "./Gem";
 import ModalGem from "./ModalGem";
 import Stars from "./Stars";
 
+// TODO: Suan statik backendten sonra dinamik hale cevrilecek
+
 export default function BadgeCard() {
   const [isModalShow, setIsModalShow] = useState(false);
 
@@ -24,6 +26,7 @@ export default function BadgeCard() {
         </div>
       </div>
 
+      {/* Modal */}
       <Modal show={isModalShow}>
         <Modal.Header>
           <div
