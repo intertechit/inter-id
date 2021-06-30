@@ -3,4 +3,4 @@
 
 yarn workspace client pre-commit
 yarn workspace admin-client pre-commit
-yarn workspace admin-backend pre-commit
+yarn workspace backend pre-commit

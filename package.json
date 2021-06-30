@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "admin-backend",
+    "backend",
     "admin-client",
     "client"
   ],
@@ -16,9 +16,9 @@
     "client-build": "yarn workspace client build",
     "admin-client-start": "yarn workspace admin-client start",
     "admin-client-build": "yarn workspace admin-client build",
-    "admin-backend-dev": "yarn workspace admin-backend dev",
-    "admin-backend-start": "yarn workspace admin-backend start",
-    "admin-backend-build": "yarn workspace admin-backend build",
+    "backend-dev": "yarn workspace backend start:dev",
+    "backend-start": "yarn workspace backend start:prod",
+    "backend-build": "yarn workspace backend build",
     "postinstall": "husky install",
     "lint": "eslint --fix ."
   },
