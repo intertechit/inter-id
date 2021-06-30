@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "admin-backend",
+    "backend",
     "admin-client",
     "client"
   ],
