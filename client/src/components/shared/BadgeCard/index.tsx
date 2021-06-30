@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import Gem from "./Gem";
+import Gem from "../Gem";
 import ModalGem from "./ModalGem";
 import Stars from "./Stars";
 
