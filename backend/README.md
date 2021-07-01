@@ -61,6 +61,8 @@ $ npm run test:cov
 ## Environment Variables
 
 ```bash
+HOST="localhost"
+
 DATABASE_HOST="localhost"
 DATABASE_PORT=5432
 DATABASE_USERNAME="postgres"
