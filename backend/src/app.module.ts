@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { BadgesModule } from './badges/badges.module';
 import { LoggerMiddleware } from './middlewares/logger.middleware';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { LoggerMiddleware } from './middlewares/logger.middleware';
     }),
     TypeOrmModule.forRoot(),
     BadgesModule,
+    UsersModule,
   ],
   controllers: [],
   providers: [],
