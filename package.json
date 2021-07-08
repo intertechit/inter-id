@@ -14,7 +14,7 @@
   "scripts": {
     "client-start": "yarn workspace client start",
     "client-build": "yarn workspace client build",
-    "admin-client-start": "yarn workspace admin-client start",
+    "admin-client-start": "yarn workspace admin-client dev",
     "admin-client-build": "yarn workspace admin-client build",
     "backend-dev": "yarn workspace backend start:dev",
     "backend-start": "yarn workspace backend start:prod",
