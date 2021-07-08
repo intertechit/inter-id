@@ -6,7 +6,13 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        height: "height",
+        "max-height": "max-height",
+        spacing: "margin, padding",
+      },
+    },
   },
   variants: {
     extend: {},

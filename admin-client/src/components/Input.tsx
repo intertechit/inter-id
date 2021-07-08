@@ -26,7 +26,7 @@ export default function Input({
           />
         )}
         <input
-          className={`rounded-lg border-gray-200 pr-9 w-full ${
+          className={`rounded-lg focus:bg-gray-100 transition-colors border-gray-200 pr-9 w-full ${
             className || ""
           }`}
           type={showPassword ? "text" : "password"}
@@ -40,7 +40,9 @@ export default function Input({
 
   return (
     <input
-      className={`rounded-lg border-gray-200 ${className || ""}`}
+      className={`rounded-lg border-gray-200 transition-colors focus:bg-gray-100 ${
+        className || ""
+      }`}
       type={type}
       {...rest}
     >
