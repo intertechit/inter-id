@@ -15,19 +15,15 @@ export default function Sidebar() {
             icon={<FaRegGem />}
             label="Rozetler"
             subItems={[
-              { name: "Tüm Rozetler", href: "/badges" },
+              { name: "Tüm Rozetler", href: "/" },
               { name: "Rozet Girişi", href: "/badges/entry" },
-              { name: "Rozet Düzenleme", href: "/badges/edit" },
             ]}
           />
           <NavItem
             index={1}
             icon={<FaListUl />}
             label="Sıralamalar"
-            subItems={[
-              { name: "Tüm Sıralamalar", href: "/ranks" },
-              { name: "Yeni Sıralama Oluştur", href: "/ranks/add" },
-            ]}
+            href="/ranks"
           />
           <NavItem
             index={2}

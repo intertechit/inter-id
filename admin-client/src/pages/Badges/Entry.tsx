@@ -8,9 +8,7 @@ import Layout from "../../components/Layout";
 export default function Entry() {
   return (
     <Layout>
-      <Card>
-        <h2 className="font-semibold mb-3">Rozet Girişi</h2>
-        <hr />
+      <Card label="Rozet Girişi">
         <form className="flex flex-col gap-3">
           <div className="flex gap-20">
             <div className="flex flex-col flex-1 mt-5">

@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 
+import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
+import Modal from "../../components/Modal";
 
-export default function index() {
+export default function Badges() {
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   return (
     <Layout>
-      <Card>
-        <h2 className="font-semibold mb-3">Tüm Rozetler</h2>
-        <hr />
+      <Card label="Tüm Rozetler" className="relative">
         <div className="border rounded-lg mt-5">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-100">
@@ -72,7 +73,10 @@ export default function index() {
                   </ul>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <button className="mr-5 text-red-500">
+                  <button
+                    className="mr-5 text-red-500"
+                    onClick={() => setShowDeleteModal(true)}
+                  >
                     <FiTrash2 size={25} />
                   </button>
                   <button className="text-blue-500">
@@ -84,6 +88,28 @@ export default function index() {
           </table>
         </div>
       </Card>
+
+      <Modal
+        visible={showDeleteModal}
+        className="w-[800px]"
+        label="Emin misin?"
+      >
+        <p className="mb-3">
+          Bu rozeti silmek istediğine emin misin? Bu işlem geri alınamaz.
+        </p>
+        <div className="flex gap-3 mt-3 flex-row-reverse">
+          <Button
+            type="danger"
+            className="w-14"
+            onClick={() => setShowDeleteModal(false)}
+          >
+            Sil
+          </Button>
+          <Button className="w-14" onClick={() => setShowDeleteModal(false)}>
+            İptal
+          </Button>
+        </div>
+      </Modal>
     </Layout>
   );
 }
